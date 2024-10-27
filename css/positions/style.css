@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    color: #333;
+    height: 180vh;
+}
+
+div {
+    width: 100%;
+    max-width: 150px;
+    height: 150px;
+    background-color: lightgray;
+    text-align: center;
+    border: 2px solid darkgray;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+.static {
+    /* Por padrão temos o Static ou seja estático. */
+    position: static;
+}
+
+.relative {
+    /* Posso reposicionar o elemento em relação a sua posição normal. (top, left, right, bottom)*/
+    position: relative;
+    left: 60px;
+}
+
+.area-absolute {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    height: 300px;
+    background-color: cornflowerblue;
+    border: none;
+}
+
+.absolute {
+    /* É posicionado em relação ao seu elemento pai mais próximo que possui a position relative,
+       caso contrário é posicionado em relação ao body .
+     */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.fixed {
+    /* É posiciona em relação a viewport. */
+    width: 100%;
+    max-width: 60px;
+    height: 60px;
+    position: fixed;
+    right: 12px;
+    background-color: lightgreen;
+    border: none;
+}
+
+.sticky {
+    /* É posicionado em relação ao scroll. */
+    position: sticky;
+    top: 0;
+    background-color: cornsilk;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+}
