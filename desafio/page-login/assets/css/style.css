@@ -117,6 +117,7 @@ button::after {
     height: 3.5rem;
     opacity: 0.2;
     z-index: -1;
+    display: none;
 }
 
 .terms-and-conditions {
@@ -200,7 +201,7 @@ input[type="checkbox"] {
 }
 
 @media (min-width: 80rem) {
-    .tag {
+    button::after {
         display: block;
     }
 
