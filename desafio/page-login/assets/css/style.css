@@ -24,6 +24,11 @@ a {
     color: var(--text-color);
     text-decoration: none;
     font-weight: 400;
+    transition: color 0.2s linear;
+}
+
+a:hover {
+    color: #1e90ff;
 }
 
 .container {
@@ -61,6 +66,7 @@ form {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    z-index: 1;
 }
 
 input[type="email"],
@@ -92,6 +98,25 @@ button {
     border-radius: 0.25rem;
     cursor: pointer;
     position: relative;
+    transition: background-color 0.5s linear;
+}
+
+button:hover {
+    background-color: #1f6dfd;
+}
+
+button::after {
+    content: "";
+    position: absolute;
+    top: 1rem;
+    right: -2.875rem;
+    background-image: url("../images/code.svg");
+    background-size: 5.75rem;
+    background-repeat: no-repeat;
+    width: 5.75rem;
+    height: 3.5rem;
+    opacity: 0.2;
+    z-index: -1;
 }
 
 .terms-and-conditions {
@@ -103,15 +128,6 @@ button {
 input[type="checkbox"] {
     width: 1.125rem;
     height: 1.125rem;
-}
-
-.tag {
-    opacity: 0.2;
-    position: absolute;
-    top: 1rem;
-    right: -2.875rem;
-    z-index: 9;
-    display: none;
 }
 
 .column-description {
