@@ -12,6 +12,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
+    padding: 0 0.5rem;
 }
 
 #app {
@@ -103,4 +104,10 @@ input[type="checkbox"],
     background-color: lightcoral;
     color: #fff;
     text-decoration: none;
+}
+
+@media (max-width: 26.75rem) {
+    form {
+        flex-direction: column;
+    }
 }

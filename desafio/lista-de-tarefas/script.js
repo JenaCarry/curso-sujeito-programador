@@ -2,20 +2,28 @@ const listElement = document.querySelector("#app ul");
 const inputElement = document.querySelector("#app input");
 const buttonElement = document.querySelector("#app button");
 
-const tarefas = [];
+const getAllTarefas = () => JSON.parse(localStorage.getItem("tarefas")) ?? [];
+
+const setAllTarefas = (tarefas) =>
+    localStorage.setItem("tarefas", JSON.stringify(tarefas));
 
 function atualizarDisplay() {
     listElement.innerHTML = "";
+    const tarefas = getAllTarefas();
     tarefas.map((tarefa, index) => adicionarTarefaLista(tarefa, index));
 }
 
 function excluirTarefa(index) {
+    const tarefas = getAllTarefas();
     tarefas.splice(index, 1);
+    setAllTarefas(tarefas);
     atualizarDisplay();
 }
 
 function concluirTarefa(index) {
+    const tarefas = getAllTarefas();
     tarefas[index].isCompleted = !tarefas[index].isCompleted;
+    setAllTarefas(tarefas);
     atualizarDisplay();
 }
 
@@ -47,7 +55,9 @@ function criarNovaTarefa() {
         return false;
     } else {
         let novaTarefa = inputElement.value;
+        const tarefas = getAllTarefas();
         tarefas.push({ text: novaTarefa, isCompleted: false });
+        setAllTarefas(tarefas);
         atualizarDisplay();
         inputElement.value = "";
     }
