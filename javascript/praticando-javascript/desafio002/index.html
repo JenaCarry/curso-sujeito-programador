@@ -9,15 +9,33 @@
     <body>
         <main>
             <div class="numberChecker">
-                <label for="numberChecker">Verificador Numérico</label>
+                <h2>Verificador Numérico</h2>
                 <input
                     type="text"
                     name="Verificador Numérico"
                     id="numberChecker"
                     placeholder="Digite um número..."
+                    class="input-style"
                 />
-                <button class="numberCheckerButton">Verificar</button>
+                <button class="numberCheckerButton button-style">
+                    Verificar
+                </button>
                 <p class="numberCheckerResult"></p>
+            </div>
+
+            <div class="numberFinder">
+                <h2>Buscador Numérico</h2>
+                <input
+                    type="text"
+                    name="Buscador de Número"
+                    id="addNumArray"
+                    placeholder="Adicione alguns números na lista..."
+                    class="input-style"
+                />
+                <button class="addNumberButton button-style">
+                    Adicionar número
+                </button>
+                <p id="listDisplay"></p>
             </div>
         </main>
         <script src="script.js"></script>

@@ -2,6 +2,10 @@ const numberChecker = document.querySelector("#numberChecker");
 const numberCheckerButton = document.querySelector(".numberCheckerButton");
 const numberCheckerResult = document.querySelector(".numberCheckerResult");
 
+function addInfo(element, msg = "") {
+    element.innerHTML = msg;
+}
+
 const numberCheckerFunction = (number) => {
     numberCheckerResult.innerHTML = "";
     if (isNaN(number) || number === "") {
@@ -18,10 +22,6 @@ const numberCheckerFunction = (number) => {
     numberChecker.value = "";
 };
 
-function addInfo(element, msg = "") {
-    element.innerHTML = msg;
-}
-
 numberChecker.addEventListener("keydown", (e) => {
     if (e.key === "Enter") {
         numberCheckerFunction(numberChecker.value);
@@ -30,4 +30,35 @@ numberChecker.addEventListener("keydown", (e) => {
 
 numberCheckerButton.addEventListener("click", () =>
     numberCheckerFunction(numberChecker.value)
+);
+
+const addNumArray = document.querySelector("#addNumArray");
+const addNumberButton = document.querySelector(".addNumberButton");
+const numArrayInput = document.querySelector("#numArray");
+const listDisplay = document.querySelector("#listDisplay");
+
+const numArray = [];
+
+const addNumArrayFunction = (array, number) => {
+    if (isNaN(number) || number === "") {
+        alert("Digite um número válido!");
+    } else if (array.find((num) => num === number)) {
+        alert(
+            `O número "${number}" já está em sua lista, por favor digite outro número!`
+        );
+    } else {
+        numArray.push(number);
+        addInfo(listDisplay, `Sua lista de números: ${numArray.join(", ")}...`);
+    }
+    addNumArray.value = "";
+};
+
+addNumArray.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+        addNumArrayFunction(numArray, addNumArray.value);
+    }
+});
+
+addNumberButton.addEventListener("click", () =>
+    addNumArrayFunction(numArray, addNumArray.value)
 );
