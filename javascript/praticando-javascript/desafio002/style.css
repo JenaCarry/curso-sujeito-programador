@@ -54,3 +54,10 @@ main div {
 .button-style:hover {
     background-color: #006fdf;
 }
+
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
