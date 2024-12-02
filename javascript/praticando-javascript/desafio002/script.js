@@ -84,6 +84,9 @@ const allProductDisplay = (products) => {
         </tr>
     `;
 
+    if (products.length === 0)
+        return (productDisplay.innerHTML = "Nenhum produto encontrado!");
+
     products.map((product) => {
         const trElement = document.createElement("tr");
         const productElement = document.createElement("td");
@@ -102,20 +105,18 @@ allProductDisplay(products);
 
 const searchNameProduct = (products) => {
     const search = productSearch.value;
+    if (search === "") return allProductDisplay(products);
+
     if (!isNaN(search)) {
         const filterProducts = products.filter((product) => {
-            return product.price === Number(search);
+            return String(product.price).startsWith(search);
         });
-        filterProducts.length === 0
-            ? allProductDisplay(products)
-            : allProductDisplay(filterProducts);
+        allProductDisplay(filterProducts);
     } else {
         const filterProducts = products.filter((product) => {
             return product.name.toUpperCase().startsWith(search.toUpperCase());
         });
-        filterProducts.length === 0
-            ? allProductDisplay(products)
-            : allProductDisplay(filterProducts);
+        allProductDisplay(filterProducts);
     }
 };
 
