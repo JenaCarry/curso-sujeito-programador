@@ -20,12 +20,8 @@ const addListDisplay = (list) => {
 const generateList = (num) => {
     const randomList = [];
     while (randomList.length < num) {
-        const actualNumber = Math.floor(Math.random() * 60);
-        if (
-            actualNumber < 1 ||
-            actualNumber > 60 ||
-            randomList.includes(actualNumber)
-        ) {
+        const actualNumber = Math.floor(Math.random() * 60) + 1;
+        if (randomList.includes(actualNumber)) {
             continue;
         } else {
             randomList.push(actualNumber);
