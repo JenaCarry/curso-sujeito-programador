@@ -21,9 +21,7 @@ const generateList = (num) => {
     const randomList = [];
     while (randomList.length < num) {
         const actualNumber = Math.floor(Math.random() * 60) + 1;
-        if (randomList.includes(actualNumber)) {
-            continue;
-        } else {
+        if (!randomList.includes(actualNumber)) {
             randomList.push(actualNumber);
         }
     }
