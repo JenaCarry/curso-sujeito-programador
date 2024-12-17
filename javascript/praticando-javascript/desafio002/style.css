@@ -1,0 +1,63 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    outline: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    padding: 0 0.5rem;
+}
+
+main {
+    width: 100%;
+    max-width: 32rem;
+    margin: 2rem 0;
+}
+
+main div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+}
+
+.input-style {
+    padding-left: 0.5rem;
+}
+
+.input-style:focus {
+    border-color: dodgerblue;
+}
+
+.input-style,
+.button-style {
+    height: 2.5rem;
+    border: 1px solid lightgray;
+    border-radius: 0.25rem;
+}
+
+.button-style {
+    border: 0;
+    background-color: dodgerblue;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+
+.button-style:hover {
+    background-color: #006fdf;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}

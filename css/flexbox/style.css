@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+.container {
+    background-color: #333;
+    height: 500px;
+    margin: 50px;
+    /* Aplicando flexbox no container */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.area {
+    width: 100px;
+    height: 100px;
+    font-size: 2rem;
+    /* Tamanho base do item */
+    /* flex-basis: 300px; */
+}
+
+.primeiro-item {
+    background-color: cornflowerblue;
+    /* Define como um item será posicionado no espaço disponível dentro de seu container. */
+    /* flex: 1; */
+    /* flex-grow: 1; */
+    /* order: 1; */
+}
+
+.segundo-item {
+    background-color: lightgreen;
+    /* flex: 1; */
+    /* order: 2; */
+    align-self: self-start;
+}
+
+.terceiro-item {
+    background-color: lightcoral;
+    /* flex: 1; */
+    /* Esse item vai reduzir duas vezes mais do que o item com "flex-shrink: 1;"
+    Funciona quando utilizado com flex-basis.
+    */
+    /* flex-shrink: 2; */
+    /* order: 3; */
+}

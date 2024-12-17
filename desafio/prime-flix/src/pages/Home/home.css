@@ -1,0 +1,45 @@
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 0 0.25rem;
+    margin: 2.5rem 0;
+}
+
+.list-movies {
+    width: 100%;
+    max-width: 48rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.list-movies article {
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+}
+
+.list-movies article h2 {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.list-movies img {
+    width: 48rem;
+    max-width: 100%;
+    max-height: 28rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+    object-fit: cover;
+    display: block;
+}
+
+.list-movies a {
+    padding: 0.875rem 0;
+    background-color: #116feb;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 0.5rem 0.5rem;
+    text-decoration: none;
+}

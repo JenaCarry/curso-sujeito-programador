@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Praticando Javascript</title>
+    </head>
+    <body>
+        <main>
+            <div class="numberChecker">
+                <h2>Verificador Numérico</h2>
+                <input
+                    type="text"
+                    name="Verificador Numérico"
+                    id="numberChecker"
+                    placeholder="Digite um número..."
+                    class="input-style"
+                />
+                <button class="numberCheckerButton button-style">
+                    Verificar
+                </button>
+                <p class="numberCheckerResult"></p>
+            </div>
+
+            <div class="numberFinder">
+                <h2>Buscador Numérico</h2>
+                <input
+                    type="text"
+                    name="Buscador de Número"
+                    id="addNumArray"
+                    placeholder="Adicione alguns números na lista..."
+                    class="input-style"
+                />
+                <button class="addNumberButton button-style">
+                    Adicionar número
+                </button>
+                <p id="listDisplay"></p>
+            </div>
+
+            <div class="productFilter">
+                <h2>Lista de Produtos</h2>
+                <input
+                    type="text"
+                    name="Buscador de Número"
+                    id="productSearch"
+                    placeholder="Procure por algum produto ou valor ..."
+                    class="input-style"
+                />
+                <table class="productDisplay">
+                    <tr>
+                        <th>Produtos</th>
+                        <th>Preços</th>
+                    </tr>
+                </table>
+            </div>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>

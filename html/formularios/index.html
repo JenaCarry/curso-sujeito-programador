@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criando Formulários</title>
+</head>
+
+<body>
+    <h1>Formulários</h1>
+
+    <form>
+        <!-- Email -->
+        <div>
+            <label for="email">Seu email: </label>
+            <input type="email" name="email" id="email">
+        </div>
+        <!-- Text -->
+        <div>
+            <label for="fname">Primeiro nome: </label>
+            <input type="text" name="fname" id="fname" placeholder="Seu primeiro nome" required>
+        </div>
+        <div>
+            <label for="lname">Último nome: </label>
+            <input type="text" name="lname" id="lname" placeholder="Seu último nome" required>
+        </div>
+        <!-- Radio -->
+        <div>
+            <label>
+                <strong>Qual seu nível como programador?</strong>
+            </label>
+            <div>
+                <label for="iniciante">
+                    <input type="radio" name="level" id="iniciante" value="iniciante" checked>
+                    Sou iniciante
+                </label>
+
+                <label for="intermediário">
+                    <input type="radio" name="level" id="intermediário" value="intermediário">
+                    Sou intermediário
+                </label>
+
+
+                <label for="profissional">
+                    <input type="radio" name="level" id="profissional" value="profissional">
+                    Sou profissional
+                </label>
+            </div>
+        </div>
+        <!-- Select -->
+        <div>
+            <label for="escolaridade">
+                <strong>Sua escolaridade</strong>
+            </label>
+            <select name="escolaridade" id="escolaridade" required>
+                <option value="" disabled selected>Selecione</option>
+                <option value="ensino-básico">Ensino básico</option>
+                <option value="ensino-médio">Ensino médio</option>
+                <option value="ensino-superior">Ensino superior</option>
+            </select>
+        </div>
+        <!-- Checkbox -->
+        <div>
+            <label for="tecnologias">
+                <strong>Selecione todas as tecnologias que você conhece:</strong>
+            </label>
+            <div>
+                <input type="checkbox" name="html" id="html" value="html">
+                <label for="html">HTML</label>
+            </div>
+            <div>
+                <input type="checkbox" name="css" id="css" value="css">
+                <label for="css">CSS</label>
+            </div>
+            <div>
+                <input type="checkbox" name="javascript" id="javascript" value="javascript">
+                <label for="javascript">JavaScript</label>
+            </div>
+            <div>
+                <input type="checkbox" name="react" id="react" value="react">
+                <label for="react">React</label>
+            </div>
+        </div>
+        <!-- Date -->
+        <div>
+            <label for="nascimento">Data nascimento: </label>
+            <input type="date" name="nascimento" id="nascimento">
+        </div>
+        <div>
+            <input type="submit" value="Cadastrar">
+        </div>
+    </form>
+</body>
+
+</html>

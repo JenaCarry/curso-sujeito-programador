@@ -1,0 +1,227 @@
+:root {
+    --primary-color: #FFF;
+    --secondary-color: #0056FB;
+    --text-color: #000;
+}
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.2s linear;
+}
+
+a:hover {
+    color: #1e90ff;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.column-form {
+    width: 100%;
+    max-width: 24rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.875rem;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 0 0.625rem;
+    margin: 0 auto;
+}
+
+.column-form h1 {
+    font-size: 2.25rem;
+    font-weight: 500;
+}
+
+.column-form p {
+    font-size: 0.875rem;
+    font-weight: bold;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    z-index: 1;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+    height: 2.5rem;
+    border: 1px solid var(--text-color);
+    border-radius: 0.25rem;
+    padding-left: 0.625rem;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="text"]:focus {
+    outline: 0;
+    border: 1px solid var(--text-color);
+}
+
+input::placeholder {
+    color: var(--text-color);
+}
+
+button {
+    font-size: 1rem;
+    font-weight: 500;
+    height: 2.5rem;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    border-radius: 0.25rem;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.5s linear;
+}
+
+button:hover {
+    background-color: #1f6dfd;
+}
+
+button::after {
+    content: "";
+    position: absolute;
+    top: 1rem;
+    right: -2.875rem;
+    background-image: url("../images/code.svg");
+    background-size: 5.75rem;
+    background-repeat: no-repeat;
+    width: 5.75rem;
+    height: 3.5rem;
+    opacity: 0.2;
+    z-index: -1;
+    display: none;
+}
+
+.terms-and-conditions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+input[type="checkbox"] {
+    width: 1.125rem;
+    height: 1.125rem;
+}
+
+.column-description {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0 0.875rem;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.column-description img {
+    width: 100%;
+    max-width: 24rem;
+}
+
+.description {
+    max-width: 21.75rem;
+}
+
+.description h2 {
+    font-size: 2.25rem;
+    font-weight: 500;
+}
+
+.description p {
+    max-width: 18rem;
+    margin-top: 1rem;
+    line-height: 1.5rem;
+}
+
+@media (min-width: 56rem) {
+    .container {
+        flex-direction: row;
+    }
+
+    section {
+        flex: 1;
+    }
+
+    .column-form {
+        max-width: 26rem;
+        gap: 1.25rem;
+    }
+
+    .column-form h1 {
+        font-size: 2.5rem;
+    }
+
+    form {
+        gap: 1.25rem;
+    }
+
+    .column-description {
+        flex: 1;
+    }
+}
+
+@media (min-width: 64rem) {
+    .column-form {
+        padding: 0;
+    }
+
+    .column-description {
+        padding: 0;
+    }
+}
+
+@media (min-width: 80rem) {
+    button::after {
+        display: block;
+    }
+
+    .column-description {
+        gap: 2rem;
+    }
+
+    .column-description img {
+        max-width: 32.75rem;
+    }
+
+    .description {
+        max-width: 26rem;
+    }
+
+    .description h2 {
+        font-size: 2.875rem;
+    }
+
+    .description p {
+        max-width: 22rem;
+    }
+}

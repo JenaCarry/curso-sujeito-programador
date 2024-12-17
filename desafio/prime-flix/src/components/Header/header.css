@@ -1,0 +1,25 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.625rem 1.25rem;
+    background-color: #333;
+}
+
+.logo,
+.favorites {
+    text-decoration: none;
+}
+
+.logo {
+    font-size: 1.875rem;
+    color: #fff;
+    font-weight: bold;
+}
+
+.favorites {
+    background-color: #fff;
+    color: #333;
+    border-radius: 0.25rem;
+    padding: 0.25rem 0.875rem;
+}
