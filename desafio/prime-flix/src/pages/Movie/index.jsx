@@ -15,7 +15,7 @@ export function Movie() {
             try {
                 const response = await API.get(`movie/${id}`, {
                     params: {
-                        api_key: "1fc84e1b291bd512c56bec5873565c97",
+                        api_key: process.env.REACT_APP_API_KEY,
                         language: "pt-BR",
                     },
                 });

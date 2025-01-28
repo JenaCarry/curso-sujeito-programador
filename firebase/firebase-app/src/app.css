@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    align-items: center;
+    padding: 0 0.25rem;
+    min-height: 100vh;
+    color: #333;
+}
+
+.container {
+    width: 100%;
+    max-width: 24rem;
+    margin: 2rem auto;
+}
+
+.container h2 {
+    text-align: center;
+    margin-bottom: 1.25rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input {
+    border: 1px solid lightgray;
+    border-radius: 0.25rem;
+    height: 2.5rem;
+    padding-left: 0.5rem;
+    transition: all 0.2s;
+}
+
+form input:focus {
+    border: 1px solid dodgerblue;
+}
+
+form button,
+button {
+    height: 2.5rem;
+    border-radius: 0.25rem;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: #fff;
+    background-color: #333;
+    transition: all 0.3s;
+}
+
+form button:hover,
+button:hover {
+    color: #333;
+    background-color: #fff;
+}
+
+.allDocs-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-post {
+    margin: 1.25rem 0;
+}
+
+.allDocs-container ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.allDocs-container ul li {
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+}
+
+.allDocs-container strong {
+    margin-right: 0.25rem;
+}
+
+.button-list {
+    display: flex;
+    gap: 0.625rem;
+}
+
+.button-list button {
+    flex: 1;
+}
+
+.initial {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+    margin-top: 0.5rem;
+}
+
+.initial button {
+    font-size: 1rem;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.initial button:hover {
+    color: dodgerblue;
+}
+
+.user-status {
+    display: grid;
+    gap: 0.25rem;
+    font-size: 1rem;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.user-status h2 {
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+}
+
+.user-status button {
+    width: 100%;
+}
