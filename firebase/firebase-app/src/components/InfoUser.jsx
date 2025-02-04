@@ -5,11 +5,13 @@ export function InfoUser({
     setUserDetails,
     setLoggedIn,
     signOut,
+    setPosts,
 }) {
     const logout = async () => {
         await signOut(auth);
         setUserDetails({});
         setLoggedIn(false);
+        setPosts([]);
     };
 
     return (

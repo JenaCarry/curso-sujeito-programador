@@ -203,6 +203,7 @@ function App() {
                         setLoggedIn={setLoggedIn}
                         userDetails={userDetails}
                         signOut={signOut}
+                        setPosts={setPosts}
                     />
                     <h2>Posts</h2>
                     <form onSubmit={editPostId ? handleUpdatePost : handleAdd}>
