@@ -1,16 +1,16 @@
 "use strict";
-const burguerK = {
+const burgerK = {
     nome: "Burguer K",
     endereco: "Rua logo ali",
     status: true,
 };
-// console.log(burguerK);
+// console.log(burgerK);
 function novaLoja({ nome, endereco, status }) {
     console.log(`Loja ${nome} criada com sucesso!`);
     console.log(`Endereço da loja: ${endereco}.`);
     console.log(`Status da loja: ${status}`);
 }
-novaLoja(burguerK);
+novaLoja(burgerK);
 const usuario = {
     nome: "Lucas",
     email: "lucas@test.com",

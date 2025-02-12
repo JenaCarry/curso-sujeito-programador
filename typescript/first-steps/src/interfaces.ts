@@ -4,13 +4,13 @@ interface LojaProps {
     status: boolean;
 }
 
-const burguerK: LojaProps = {
+const burgerK: LojaProps = {
     nome: "Burguer K",
     endereco: "Rua logo ali",
     status: true,
 };
 
-// console.log(burguerK);
+// console.log(burgerK);
 
 function novaLoja({ nome, endereco, status }: LojaProps): void {
     console.log(`Loja ${nome} criada com sucesso!`);
@@ -18,7 +18,7 @@ function novaLoja({ nome, endereco, status }: LojaProps): void {
     console.log(`Status da loja: ${status}`);
 }
 
-novaLoja(burguerK);
+novaLoja(burgerK);
 
 interface CadastroProps {
     nome?: string;
