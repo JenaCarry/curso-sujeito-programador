@@ -1,0 +1,54 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #121212;
+    color: #fff;
+    padding: 0 0.5rem;
+    gap: 0.875rem;
+}
+
+img {
+    width: 100%;
+    max-width: 21.875rem;
+}
+
+.category-area {
+    display: flex;
+    gap: 0.875rem;
+}
+
+button {
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    border: 0;
+}
+
+.category-button {
+    border-style: solid;
+    padding: 0.5rem 0.75rem;
+}
+
+.button-frase {
+    background-color: #1fa4db;
+    padding: 0.625rem 1rem;
+    color: #fff;
+    margin: 1.125rem 0;
+    font-weight: bold;
+}
+
+.frase {
+    width: 100%;
+    max-width: 26.25rem;
+    background-color: #fafafa;
+    color: #dd7b22;
+    font-style: italic;
+    font-size: 1.125rem;
+    border-radius: 0.25rem;
+    text-align: center;
+    padding: 0.875rem 1.125rem;
+}
