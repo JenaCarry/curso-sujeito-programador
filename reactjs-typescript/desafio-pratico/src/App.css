@@ -1,0 +1,73 @@
+main {
+    width: 100%;
+    max-width: 36rem;
+    display: grid;
+    gap: 1.25rem;
+}
+
+h1,
+.result {
+    color: #fff;
+    text-align: center;
+}
+
+form {
+    display: grid;
+    gap: 0.875rem;
+    background-color: #fff;
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+}
+
+form div {
+    display: grid;
+    gap: 0.375rem;
+}
+
+form label {
+    font-weight: 500;
+}
+
+input {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: #333;
+    color: #fff;
+    box-sizing: border-box;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+input::placeholder {
+    color: #ddd;
+}
+
+input:focus {
+    border-color: #007bff;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: none;
+}
+
+form button {
+    padding: 1rem;
+    background-color: dodgerblue;
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.result {
+    font-size: 1.25rem;
+}
