@@ -3,6 +3,7 @@
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
     "composite": true,
+    "moduleResolution": "bundler",
     "noEmit": true
   },
   "include": ["src"]
