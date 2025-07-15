@@ -3,6 +3,7 @@
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
     "composite": true,
+    "module": "ESNext",
     "moduleResolution": "bundler",
     "noEmit": true
   },
