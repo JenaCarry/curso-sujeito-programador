@@ -24,9 +24,7 @@ export function Detail() {
     useEffect(() => {
         async function getCoin() {
             try {
-                fetch(
-                    `https://rest.coincap.io/v3/assets/${cripto}?apiKey=af336c7f65325a71e38bada8ced538928aef5297c359c5c0177465b0ed5e4489`
-                )
+                fetch(`/api/coincap?id=${cripto}`)
                     .then((response) => response.json())
                     .then((data: DataProps) => {
                         if ("error" in data) {
