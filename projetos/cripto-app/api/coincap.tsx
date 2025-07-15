@@ -16,7 +16,7 @@ export default async function handler(
         apiUrl = `https://rest.coincap.io/v3/assets?limit=${validatedLimit}&offset=${validatedOffset}`;
     }
 
-    const apiKey = process.env.COINCAP_API_KEY;
+    const apiKey = process.env.VITE_COINCAP_API_KEY;
 
     if (!apiKey) {
         return response.status(500).json({ error: "API key not configured" });
