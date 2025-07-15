@@ -43,7 +43,7 @@ export default async function handler(
 
     try {
         const fetchResponse = await fetch(
-            `https://api.coincap.io/v2/assets?limit=${limit}&offset=${offset}`,
+            `https://rest.coincap.io/v3/assets?limit=${limit}&offset=${offset}`,
             {
                 headers: {
                     Authorization: `Bearer ${apiKey}`,
