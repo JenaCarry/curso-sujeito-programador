@@ -1,6 +1,6 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 
-module.exports = async function handler(
+export default async function handler(
     request: VercelRequest,
     response: VercelResponse
 ) {
@@ -45,4 +45,4 @@ module.exports = async function handler(
         console.error(error);
         return response.status(500).json({ error: "Failed to fetch data" });
     }
-};
+}
